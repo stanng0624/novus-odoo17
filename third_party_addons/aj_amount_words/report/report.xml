@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="sales_report_amount_words" inherit_id="sale.report_saleorder_document">
+            <xpath expr="//div[hasclass('clearfix')]" position="after">
+                <div>
+                     <p><strong style="color:#555555">Amount in words: </strong><span t-field="doc.amount_in_word"/></p>
+                </div>
+            </xpath>
+        </template>
+        <template id="purchase_report_amount_words" inherit_id="purchase.report_purchaseorder_document">
+            <xpath expr="//div[@id='total']" position="after">
+                <div>
+                     <p><strong style="color:#555555">Amount in words: </strong><span t-field="o.amount_in_word"/></p>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>
